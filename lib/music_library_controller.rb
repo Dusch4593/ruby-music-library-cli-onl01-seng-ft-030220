@@ -109,9 +109,12 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     
     input = gets.strip.to_i
-    songs = list_songs
+    songs = Song.all
 
-    if(input.between?(1,songs.count))
+    if(input.between?(1, songs.length))
+      songs = songs.sort do |song_a, song_b|
+        song_a.name <=> song_b.name
+      end
       song_name = songs[input-1].name
       
       artist = songs[input-1].artist.name
