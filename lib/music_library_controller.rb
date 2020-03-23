@@ -39,25 +39,24 @@ class MusicLibraryController
   
   
   def list_songs
-    # sort by Song objects by their names
-    sorted_list = Song.all.sort do |song_a, song_b|
+    # sort Song objects by their names
+    song_list = Song.all.sort do |song_a, song_b|
       song_a.name <=> song_b.name 
     end
     
-    sorted_list.each.with_index(1) do |song, index|
+    song_list.each.with_index(1) do |song, index|
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
   
   def list_artists 
-    # sort by artist 
-    artist_list = @music_importer.collect do |file|
-      file.split(" - ")[0]
+    # sort Artist objects by their names
+    artist_list = Artist.all.sort do |artist_a, artist_b|
+      artist_a.name <=> artist_b.name
     end
     
-    artist_list = artist_list.sort.uniq
-    artist_list.each_with_index do |artist, index|
-      puts "#{index+1}. #{artist}"
+    artist_list.each.with_index(1) do |artist, index|
+      puts "#{index}. #{artist.name}"
     end
   end
 end
