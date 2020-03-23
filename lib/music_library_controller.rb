@@ -82,7 +82,7 @@ class MusicLibraryController
       end
       
       artist.each.with_index(1) do |song, index|
-       puts "#{index}. ##{song.name} - #{song.genre.name}"
+       puts "#{index}. #{song.name} - #{song.genre.name}"
       end     
     end
     
