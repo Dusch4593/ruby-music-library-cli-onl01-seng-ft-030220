@@ -75,5 +75,12 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     
     input = gets
+    
+    binding.pry
+    
+    song_list = Song.all.sort do |song_a, song_b|
+      song_a.name <=> song_b.name 
+    end
+    
   end
 end
