@@ -41,7 +41,7 @@ class MusicLibraryController
   def list_songs
     # sort by Song objects by their names
     sorted_list = Song.all.sort do |song_a, song_b|
-      binding.pry
+      #binding.pry
       song_a.name <=> song_b.name 
     end
     
