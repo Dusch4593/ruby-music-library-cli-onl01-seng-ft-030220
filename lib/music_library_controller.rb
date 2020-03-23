@@ -77,7 +77,7 @@ class MusicLibraryController
     input = gets.strip
     
     if(Artist.all.include?(input))
-      song_list = Song.all.sort do |song_a, song_b|
+      song_list = Artist.songs.sort do |song_a, song_b|
         song_a.name <=> song_b.name 
       end
       song_list.each.with_index(1) do |song, index|
