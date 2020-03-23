@@ -112,5 +112,5 @@ class MusicLibraryController
       song_name = songs[input-1].name
       artist = songs[input-1].artist.name
       puts "Playing #{song_name} by #{artist}"
-  end
+    end
 end
