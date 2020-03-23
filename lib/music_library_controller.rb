@@ -59,4 +59,13 @@ class MusicLibraryController
       puts "#{index}. #{artist.name}"
     end
   end
+  
+  def list_genres 
+    # sort Genre objects by their names 
+    genre_list = Genre.all.sort do |genre_a, genre_b|
+      genre_a.name <=> genre_b.name
+    end
+    
+    
+  end
 end
