@@ -45,7 +45,7 @@ class MusicLibraryController
     end
     
     sorted_list.each.with_index(1) do |song, index|
-      binding.pry
+      #binding.pry
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
