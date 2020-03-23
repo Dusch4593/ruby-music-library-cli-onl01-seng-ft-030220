@@ -111,7 +111,7 @@ class MusicLibraryController
     input = gets.strip.to_i
     songs = list_songs
 
-    if(input.between?(1,song.count))
+    if(input.between?(1,songs.count))
       song_name = songs[input-1].name
       
       artist = songs[input-1].artist.name
