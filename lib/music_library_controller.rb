@@ -110,6 +110,7 @@ class MusicLibraryController
     songs = list_songs
     if(input.between?(1,songs.count))
       song_name = songs[input-1].name
+      binding.pry
       artist = songs[input-1].artist.name
       puts "Playing #{song_name} by #{artist}"
     end
