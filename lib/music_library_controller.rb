@@ -41,7 +41,6 @@ class MusicLibraryController
   def list_songs
     # sort by Song objects by their names
     sorted_list = Song.all.sort do |song_a, song_b|
-      #binding.pry
       song_a.name <=> song_b.name 
     end
     
@@ -49,10 +48,7 @@ class MusicLibraryController
       song.name
     end
     
-    binding.pry
-    
-    sorted_list.each.with_index(1) do |song, index|
-      #binding.pry
+    sorted_list.uniq.each.with_index(1) do |song, index|
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
     end
   end
