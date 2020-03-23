@@ -45,9 +45,11 @@ class MusicLibraryController
       song_a.name <=> song_b.name 
     end
     
-    sorted_list.each do |song|
-      binding.pry
+    names = sorted_list.collect do |song|
+      song.name
     end
+    
+    binding.pry
     
     sorted_list.each.with_index(1) do |song, index|
       #binding.pry
