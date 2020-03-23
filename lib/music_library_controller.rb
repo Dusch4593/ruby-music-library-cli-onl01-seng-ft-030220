@@ -108,7 +108,8 @@ class MusicLibraryController
     
     input = gets.strip
     songs = Song.all
-    if(input.between?(1,songs.length))
+    binding.pry
+    if(input.between?(1,))
       song_name = songs[input-1].name
       artist = songs[input-1].artist.name
       puts "Playing #{song_name} by #{artist}"
