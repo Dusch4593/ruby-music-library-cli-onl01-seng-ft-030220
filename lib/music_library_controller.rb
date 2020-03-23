@@ -66,6 +66,8 @@ class MusicLibraryController
       genre_a.name <=> genre_b.name
     end
     
-    
+    genre_list.each.with_index(1) do |genre, index|
+      puts "#{index}. #{genre}"
+    end
   end
 end
