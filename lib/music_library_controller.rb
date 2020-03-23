@@ -108,6 +108,7 @@ class MusicLibraryController
     
     input = gets.strip
     
-    
+    if(input.between?(1,Song.all.length))
+      puts "Playing "
   end
 end
