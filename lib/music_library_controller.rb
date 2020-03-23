@@ -81,7 +81,7 @@ class MusicLibraryController
         song_a.name <=> song_b.name 
       end
       song_list.each.with_index(1) do |song, index|
-       puts "#{index}. #{song.artist.name} - #{song.name}"
+       puts "#{index}. ##{song.name} - #{song.genre.name}"
       end     
     end
     
