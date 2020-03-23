@@ -93,7 +93,11 @@ class MusicLibraryController
     input = gets.strip 
     
     if(genre = Genre.find_by_name(input))
-      genre = genre.songs
+      genre = genre.songs.sort do |song_a, song_b|
+        song_a.name <=> song_b.name
+      end
+      
+      
     end
   end
 end
