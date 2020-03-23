@@ -108,7 +108,7 @@ class MusicLibraryController
     
     input = gets.strip.to_i
     songs = list_songs
-    binding.pry
+
     if(input.between?(1,songs.count))
       song_name = songs[input-1].name
       
