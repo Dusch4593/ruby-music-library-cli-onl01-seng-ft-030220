@@ -76,7 +76,8 @@ class MusicLibraryController
     
     input = gets
     
-    binding.pry
+    if(Artist.all.include?(input))
+      
     
     song_list = Song.all.sort do |song_a, song_b|
       song_a.name <=> song_b.name 
